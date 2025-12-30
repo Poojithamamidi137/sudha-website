@@ -119,8 +119,11 @@
   }
 
   /* HAMBURGER */
+
+
+  /* HAMBURGER ICON */
 .menu-toggle {
- 
+  display: none;
   font-size: 28px;
   color: #ffffff;
   cursor: pointer;
@@ -128,26 +131,37 @@
 
 /* MOBILE */
 @media (max-width: 768px) {
+
   .menu-toggle {
     display: block;
     position: absolute;
     right: 20px;
     top: 12px;
+    z-index: 10000; /* keeps icon clickable */
   }
 
   .nav-links {
     display: none;
     flex-direction: column;
     background: #142b6f;
+    width: 100%;
     padding: 15px 0;
   }
 
   .nav-links.show {
     display: flex;
   }
-}
-}
 
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+}
+}
 
 
 

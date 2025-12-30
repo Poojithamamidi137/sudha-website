@@ -625,7 +625,7 @@
 @media (max-width: 768px) {
 
   .footer-links a {
-    justify-content: center;     /* center on mobile */
+       /* center on mobile */
     font-size: 15px;
   }
 

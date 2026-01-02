@@ -15,11 +15,12 @@
 .header-container {
   max-width: 1200px;
   margin: auto;
-  padding: 0 20px;
+  padding: 0 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 
 /* LOGO */
 .logo img {
@@ -134,10 +135,12 @@
 }
 
 /* EXTRA SMALL */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .appointment-btn {
-    width: 100%;
-    text-align: center;
+    padding: 10px 18px;
+    font-size: 14px;
+    border-radius: 24px;
+    white-space: nowrap; /* prevents wrapping */
   }
 }
 
@@ -2459,4 +2462,31 @@ margin-top: 50px;
 
 
 
+/* FIX STICKY NAVBAR ISSUE ON MOBILE (SAFE VERSION) */
+@media (max-width: 768px) {
 
+  /* remove transform ONLY from layout sections */
+  header,
+  .navbar,
+  section,
+  .about-section,
+  .services-section,
+  .why-choose-section,
+  .facilities-section,
+  .appointment-section {
+    transform: none !important;
+  }
+
+  /* keep floating icons safe */
+  .floating-icons,
+  .float-btn {
+    transform: translateZ(0) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .floating-icons {
+    bottom: 20px;
+    right: 15px;
+  }
+}

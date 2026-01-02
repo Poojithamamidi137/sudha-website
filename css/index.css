@@ -496,10 +496,15 @@
 }
 @media (max-width: 600px) {
   .know-more-btn {
+    margin-left: 0;          /* 🔥 RESET THE PROBLEM */
+    display: block;          /* full width control */
+    margin: 20px auto 0;     /* center horizontally */
     font-size: 15px;
     padding: 10px 24px;
+    text-align: center;
   }
 }
+
 /* IMAGE ANIMATION (LEFT → RIGHT) */
 .about-images {
   opacity: 0;
@@ -2463,30 +2468,46 @@ margin-top: 50px;
 
 
 /* FIX STICKY NAVBAR ISSUE ON MOBILE (SAFE VERSION) */
+/* ===== FIX STICKY NAVBAR ON MOBILE ===== */
+/* ===== FIX FLOATING ICONS VISIBILITY ===== */
+/* ===== FIX STICKY NAVBAR ON MOBILE ===== */
 @media (max-width: 768px) {
 
-  /* remove transform ONLY from layout sections */
-  header,
-  .navbar,
+  body {
+    overflow-x: hidden;
+  }
+
+  /* REMOVE TRANSFORM FROM ALL SECTIONS */
   section,
   .about-section,
   .services-section,
   .why-choose-section,
   .facilities-section,
-  .appointment-section {
+  .appointment-section,
+  .reviews-section,
+  .gallery-section {
     transform: none !important;
   }
 
-  /* keep floating icons safe */
-  .floating-icons,
-  .float-btn {
-    transform: translateZ(0) !important;
+  /* ENSURE NAVBAR STAYS ON TOP */
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10000;
   }
 }
-
 @media (max-width: 600px) {
+
   .floating-icons {
-    bottom: 20px;
-    right: 15px;
+    position: fixed;
+    right: 12px;
+    bottom: 80px;          /* 🔥 move above mobile browser bar */
+    z-index: 10001;
+  }
+
+  .float-btn {
+    width: 54px;
+    height: 54px;
+    font-size: 22px;
   }
 }

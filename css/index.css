@@ -213,17 +213,69 @@
   color: #ff5a00;
   font-weight: bold;
 }
+/* HERO HEIGHT TUNING */
+@media (max-width: 1024px) {
+  .hero {
+    height: 60vh;
+  }
+}
 
-/* MOBILE VIEW */
 @media (max-width: 768px) {
   .hero {
-    height: 50vh;
+    height: 45vh;
   }
+}
 
+@media (max-width: 480px) {
+  .hero {
+    height: 38vh;
+  }
+}
+
+/* IMAGE POSITION FIX FOR MOBILE */
+@media (max-width: 768px) {
+  .slide {
+    background-position: center top;
+  }
+}
+
+/* INFO BAR MOBILE */
+@media (max-width: 768px) {
   .info-bar {
     flex-direction: column;
-    text-align: center;
-    gap: 20px;
+    gap: 18px;
+    padding: 22px 16px;
+  }
+
+  .info-box {
+    max-width: 100%;
+  }
+
+  .info-box h3 {
+    font-size: 16px;
+  }
+
+  .info-box p {
+    font-size: 14px;
+  }
+
+  .info-box span {
+    font-size: 14px;
+  }
+}
+
+/* EXTRA SMALL PHONES */
+@media (max-width: 360px) {
+  .hero {
+    height: 34vh;
+  }
+
+  .info-box h3 {
+    font-size: 15px;
+  }
+
+  .info-box p {
+    font-size: 13px;
   }
 }
 
